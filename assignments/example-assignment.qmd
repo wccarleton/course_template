@@ -1,0 +1,18 @@
+---
+title: "Example Assignment"
+subtitle: "Due: date"
+format: html
+---
+
+## Task
+
+Describe what students should produce.
+
+## Requirements
+
+- Length or format
+- What to submit and where
+
+## Assessment
+
+Explain how the work will be assessed, or link to a rubric page in this folder.

@@ -1,0 +1,62 @@
+# Course identity: scripts/new-course.ps1 fills in the slug and title placeholders.
+# The slug is the course's public path: https://teaching.wccarleton.org/COURSE_SLUG/
+# Use lowercase letters, digits, and underscores; it must match the route in the
+# teaching_home repository and the course's folder in the teaching bucket.
+course-slug: COURSE_SLUG
+
+project:
+  type: website
+  # The site is built into a folder named after the slug, so this course's own
+  # Cloudflare Pages site serves the same paths as teaching.wccarleton.org/COURSE_SLUG/.
+  output-dir: docs/COURSE_SLUG
+  render:
+    - index.qmd
+    - slides/*.qmd
+    - assignments/*.qmd
+    - bibliography.qmd
+  resources:
+    - assets/branding/**
+    - assets/placeholders/**
+    - assets/fonts/**
+
+# Code in decks re-runs only when its source changes.
+execute:
+  freeze: auto
+
+bibliography: references.bib
+
+# Base for images written as assets:path/image.webp (this course's bucket folder).
+# A deck's front matter or the TALKS_ASSETS_BASE variable can override it.
+assets-base: "https://teaching-assets.wccarleton.org/COURSE_SLUG"
+
+filters:
+  - filters/assets.lua
+  - filters/image-cards.lua
+  - quarto
+
+website:
+  site-url: https://teaching.wccarleton.org/COURSE_SLUG/
+  title: "COURSE_TITLE"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Lectures"
+        menu:
+          - text: "1. Example lecture"
+            href: slides/01-example.qmd
+      - text: "Assignments"
+        menu:
+          - text: "Example assignment"
+            href: assignments/example-assignment.qmd
+      - text: "Bibliography"
+        href: bibliography.qmd
+    right:
+      - text: "All courses"
+        href: https://teaching.wccarleton.org/
+
+format:
+  html:
+    theme: cosmo
+    toc: false
+    html-math-method: mathml

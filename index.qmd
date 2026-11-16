@@ -1,0 +1,26 @@
+---
+title: "COURSE_TITLE"
+subtitle: "Course website, slide decks, and assignments"
+format: html
+---
+
+This site collects the lecture slide decks, assignments, and bibliography for the course.
+
+## Course Abstract
+
+One or two paragraphs describing what the course covers and what students
+should be able to do by the end of it.
+
+## Suggested Pre-Reading
+
+- An orientation reading [@boxScienceStatistics1976].
+
+## Schedule
+
+| Session | Topic | Slides |
+|---|---|---|
+| 1 | Example lecture | [Open slides](slides/01-example.qmd) |
+
+## Assignments
+
+- [Example assignment](assignments/example-assignment.qmd)
