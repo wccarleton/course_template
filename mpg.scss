@@ -145,22 +145,24 @@ section.title-slide h1 {
   letter-spacing: 1px;              /* optional: extra tracking */
 }
 
-section.title-slide .subtitle {
+section.title-slide .title-details {
   position: absolute;
   left: 12%;
-  top: calc(85% - 2.4rem);
+  bottom: 12%;
   width: 60%;
+  display: grid;
+  gap: 0.55rem;
+}
+
+section.title-slide .subtitle {
   font-size: 2.2rem;
   line-height: 1.1;
+  text-wrap: balance;
   margin: 0;
   color: #ffffff !important;
 }
 
 section.title-slide .title-meta {
-  position: absolute;
-  left: 12%;
-  top: calc(85% + 0.35rem);
-  width: 60%;
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.25;
